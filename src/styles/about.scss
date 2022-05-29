@@ -1,0 +1,64 @@
+.about {
+  &__image {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/pexels-alexandr-podvalny-1227513.jpeg');
+    background-size: cover;
+    overflow: hidden;
+    background-position: bottom;
+    margin: 0 auto;
+    min-width: 360px;
+    max-width: 1170px;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    @include onTablet {
+    }
+  
+    @include onDesktop {
+      height: 650px;
+    }
+
+    @include onOther {
+      height: 650px;
+    }
+  }
+
+  &__container {
+    max-width: 380px;
+    margin: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 21px;
+    line-height: 40px;
+    font-size: 40px;
+    color: #FFFFFF;
+    font-family: 'Nunito';
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-family: 'Nunito';
+  }
+
+  &__button {
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+}

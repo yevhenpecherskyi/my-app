@@ -1,0 +1,108 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1170px;
+  margin: 0 auto;
+
+  &__title {
+    margin-top: 140px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Nunito';
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 40px;
+  }
+
+  &__button {
+    margin: 54px auto 0;
+  }
+
+  &__item {
+    margin-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 254px;
+    min-width: 328px;
+    box-sizing: border-box;
+    max-width: 1170px;
+    width: 95%;
+    column-gap: 16px;
+    row-gap: 20px;
+    margin: 0 auto;
+
+    @include onTablet {
+      gap: 16px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @include onDesktop {
+      gap: 29px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-sizing: border-box;
+  min-width: 328px;
+  padding: 20px;
+  width: 100%;
+  height: 254px;
+
+  @include onTablet {
+    min-width: 344px;
+  }
+
+  @include onDesktop {
+    min-width: 282px;
+  }
+
+  @include onOther {
+    max-width: 370px;
+  }
+
+  &__photo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__photo {
+    width: 70px;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    text-align: center;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+    font-family: 'Nunito';
+  }
+
+  &__role, &__number, &__email {
+    margin: 0;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+    font-family: 'Nunito';
+  }
+
+  &__about-container {
+    height: 78px;
+  }
+}

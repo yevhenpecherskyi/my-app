@@ -1,0 +1,18 @@
+@import './mixins';
+
+@import './header';
+@import './buttons';
+@import './about';
+@import './UserCards.scss';
+@import './NewUserForm.scss';
+@import './Loader.scss';
+
+body {
+  margin: 0;
+  background-color: #F8F8F8;
+  font-family: "Nunito";
+}
+
+main {
+  background-color: #F8F8F8;
+}

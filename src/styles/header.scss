@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  height: 60px;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+    min-width: 360px;
+    width: 100%;
+    padding: 0 16px;
+
+    @include onTablet {
+      padding: 0 32px;
+    }
+  
+    @include onDesktop {
+      padding: 0 60px;
+    }
+
+    @include onOther {
+      max-width: 1170px;
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-container {
+    background-image: url(../images/logo.svg);
+    background-size: cover;
+    width: 104px;
+    height: 26px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
