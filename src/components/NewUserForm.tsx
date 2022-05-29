@@ -18,6 +18,7 @@ export const NewUserForm: React.FC<Props> = ({
   const [position_id, setId] = useState(0);
   const [success, setSuccess] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [chose, setChose] = useState('');
 
   useEffect(() => {
     getToken().then(response => setTok(response.token));
@@ -53,6 +54,8 @@ export const NewUserForm: React.FC<Props> = ({
     setLoaded(false);
     setPage(1);
   };
+
+  // console.log(photo.name);
 
   return (
     loaded ? <Loader /> : (
@@ -139,7 +142,6 @@ export const NewUserForm: React.FC<Props> = ({
 
               <div className="form__radio radio">
                 <p>Select your position</p>
-
                 <div className="radio__position">
                   <label>
                     <input
@@ -217,12 +219,14 @@ export const NewUserForm: React.FC<Props> = ({
                     className="uploader__inputfile"
                     onChange = {(e) => {
                       setPhoto(e.target.files[0]);
+                      setChose(e.target.files[0].name);
                     }}
                   />
 
                   <input
                     type="text"
-                    value={photo}
+                    value={chose}
+                    readOnly
                     placeholder="Upload your photo"
                     className="uploader__input"
                   />
